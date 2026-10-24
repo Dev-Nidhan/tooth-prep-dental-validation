@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbf8f4;
+  --foreground: #121820;
+  --card: #ffffff;
+  --card-foreground: #121820;
+  --primary: #2c453c;
+  --primary-foreground: #fbf8f4;
+  --secondary: #e8e4dc;
+  --secondary-foreground: #2c453c;
+  --muted: #f1eee8;
+  --muted-foreground: #5c6570;
+  --accent: #e7efe9;
+  --accent-foreground: #1c3a30;
+  --destructive: #c4654a;
+  --destructive-foreground: #fbf8f4;
+  --border: #ddd6c8;
+  --input: #ddd6c8;
+  --ring: #2c453c;
+  --optimal: #1f7a4d;
+  --warning: #8a5a10;
+  --critical: #c4654a;
+  --blueprint: #2c5fa8;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-optimal: var(--optimal);
+  --color-warning: var(--warning);
+  --color-critical: var(--critical);
+  --color-blueprint: var(--blueprint);
+  --font-sans: var(--font-manrope), sans-serif;
+  --font-heading: var(--font-outfit), sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --radius-md: var(--radius);
+  --radius-lg: 0.75rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+::selection {
+  background: #d5e4dc;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .print-break {
+    break-inside: avoid;
+  }
+}
