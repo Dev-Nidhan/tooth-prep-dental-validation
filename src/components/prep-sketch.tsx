@@ -3,7 +3,7 @@ export function PrepSketch() {
     <svg viewBox="0 0 420 280" className="h-auto w-full" role="img" aria-label="Cross-section of a tapered crown preparation">
       <rect x="0" y="0" width="420" height="280" fill="#F4F0E8" />
       <path d="M28 214 H392" stroke="#C9BBA6" strokeWidth="1" />
-      <text x="36" y="232" fill="#5C6570" fontSize="11" fontFamily="Manrope, sans-serif">
+      <text x="36" y="236" fill="#5C6570" fontSize="11" fontFamily="Manrope, sans-serif">
         Finish line
       </text>
       <path
@@ -33,8 +33,8 @@ export function PrepSketch() {
       </text>
       <circle cx="78" cy="214" r="3.5" fill="#C4654A" />
       <circle cx="342" cy="214" r="3.5" fill="#C4654A" />
-      <text x="250" y="250" fill="#5C6570" fontSize="11" fontFamily="Manrope, sans-serif">
-        Axial walls narrow toward the occlusal
+      <text x="150" y="258" fill="#5C6570" fontSize="12" fontFamily="Manrope, sans-serif">
+        Narrows toward the occlusal
       </text>
     </svg>
   );

@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
-  { href: "/analyze", label: "Check a prep" },
-  { href: "/parameters", label: "Ranges" },
-  { href: "/method", label: "Method" },
+  { href: "/analyze", label: "Check a prep", short: "Check" },
+  { href: "/parameters", label: "Ranges", short: "Ranges" },
+  { href: "/method", label: "Method", short: "Method" },
 ];
 
 export function SiteHeader() {
@@ -41,7 +41,8 @@ export function SiteHeader() {
                   active ? "bg-secondary font-medium text-foreground" : "text-muted-foreground",
                 )}
               >
-                {link.label}
+                <span className="sm:hidden">{link.short}</span>
+                <span className="hidden sm:inline">{link.label}</span>
               </Link>
             );
           })}

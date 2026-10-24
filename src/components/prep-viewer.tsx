@@ -26,7 +26,7 @@ function Scene({ positions, colors }: Props) {
   return (
     <Canvas
       camera={{
-        position: [distance * 0.85, -distance * 2.05, distance * 0.72],
+        position: [distance * 1.5, -distance * 3.5, distance * 1.7],
         fov: 35,
         near: distance / 200,
         far: distance * 40,

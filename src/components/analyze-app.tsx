@@ -229,15 +229,15 @@ export function AnalyzeApp() {
       </div>
 
       <nav className="no-print sticky top-14 z-30 -mx-4 mb-4 border-b border-border bg-background px-4 lg:static lg:mx-0 lg:mb-6 lg:border-0 lg:bg-transparent lg:px-0">
-        <ol className="flex gap-1 overflow-x-auto py-3 lg:py-0">
+        <ol className="grid grid-cols-5 gap-1 py-3 lg:flex lg:py-0">
           {STEPS.map((item, index) => (
-            <li key={item.id}>
+            <li key={item.id} className="min-w-0">
               <button
                 type="button"
                 data-testid={`step-${item.id}`}
                 onClick={() => go(item.id)}
                 className={cn(
-                  "rounded-md border px-3 py-1.5 text-sm whitespace-nowrap",
+                  "w-full rounded-md border px-1 py-1.5 text-[11px] whitespace-nowrap lg:w-auto lg:px-3 lg:text-sm",
                   step === item.id ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-foreground",
                 )}
               >
@@ -371,7 +371,9 @@ export function AnalyzeApp() {
                           className={cn("mx-auto w-full rounded-sm", sector.undercutMm >= 0.12 ? "bg-critical" : sector.wallDeg < 2 || sector.wallDeg > 12.5 ? "bg-warning" : "bg-optimal")}
                           style={{ height: `${Math.min(72, Math.max(10, Math.abs(sector.wallDeg) * 3))}px` }}
                         />
-                        <p className="mt-1 font-mono text-[10px]">{sector.wallDeg.toFixed(0)}°</p>
+                        <p className="mt-1 font-mono text-[10px]">
+                          {sector.undercutMm >= 0.12 ? `+${sector.undercutMm.toFixed(2)}` : `${sector.wallDeg.toFixed(0)}°`}
+                        </p>
                       </div>
                     ))}
                   </div>
